@@ -143,7 +143,12 @@ class MPC_Texts {
 			'save'           => __( 'Save my choices', 'myplan-consent' ),
 			'close'          => __( 'Close', 'myplan-consent' ),
 			'always_on'      => __( 'Always active', 'myplan-consent' ),
-			'cookies_used'   => __( 'Cookies used', 'myplan-consent' ),
+			'cookies_used'   => __( 'Cookies and services', 'myplan-consent' ),
+			// Under the list of an optional category: the list says what the
+			// category would use, not what is running now.
+			'only_if_on'     => $informal
+				? _x( 'Used only if you allow this category.', 'informal', 'myplan-consent' )
+				: _x( 'Used only if you allow this category.', 'formal', 'myplan-consent' ),
 			'col_name'       => __( 'Name', 'myplan-consent' ),
 			'col_provider'   => __( 'Provider', 'myplan-consent' ),
 			'col_purpose'    => __( 'Purpose', 'myplan-consent' ),

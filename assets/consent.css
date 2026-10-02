@@ -358,6 +358,12 @@
 	vertical-align: top;
 }
 
+.mpc-cookies__note {
+	margin: 6px 0 0;
+	font-style: italic;
+	color: var(--mpc-muted);
+}
+
 .mpc-cookies code {
 	font-size: 12px;
 	white-space: nowrap;

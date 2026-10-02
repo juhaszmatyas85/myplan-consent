@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-02T15:46:30+02:00\n"
+"POT-Creation-Date: 2026-10-02T16:05:34+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: myplan-consent\n"
@@ -101,12 +101,12 @@ msgid "Functional (embedded maps, videos, preferences)"
 msgstr ""
 
 #: includes/class-mpc-admin.php:89
-#: includes/class-mpc-texts.php:183
+#: includes/class-mpc-texts.php:188
 msgid "Analytics"
 msgstr ""
 
 #: includes/class-mpc-admin.php:90
-#: includes/class-mpc-texts.php:187
+#: includes/class-mpc-texts.php:192
 msgid "Marketing"
 msgstr ""
 
@@ -339,7 +339,7 @@ msgid "We use cookies that are necessary for this website to work. With your con
 msgstr ""
 
 #: includes/class-mpc-texts.php:136
-#: includes/class-mpc-texts.php:153
+#: includes/class-mpc-texts.php:158
 msgid "Cookie settings"
 msgstr ""
 
@@ -374,105 +374,115 @@ msgid "Always active"
 msgstr ""
 
 #: includes/class-mpc-texts.php:146
-msgid "Cookies used"
-msgstr ""
-
-#: includes/class-mpc-texts.php:147
-msgid "Name"
-msgstr ""
-
-#: includes/class-mpc-texts.php:148
-msgid "Provider"
-msgstr ""
-
-#: includes/class-mpc-texts.php:149
-msgid "Purpose"
+msgid "Cookies and services"
 msgstr ""
 
 #: includes/class-mpc-texts.php:150
-msgid "Expiry"
+msgctxt "informal"
+msgid "Used only if you allow this category."
 msgstr ""
 
 #: includes/class-mpc-texts.php:151
-msgid "Cookie policy"
+msgctxt "formal"
+msgid "Used only if you allow this category."
 msgstr ""
 
 #: includes/class-mpc-texts.php:152
-msgid "Privacy notice"
+msgid "Name"
+msgstr ""
+
+#: includes/class-mpc-texts.php:153
+msgid "Provider"
 msgstr ""
 
 #: includes/class-mpc-texts.php:154
-msgid "Allow and show"
+msgid "Purpose"
+msgstr ""
+
+#: includes/class-mpc-texts.php:155
+msgid "Expiry"
 msgstr ""
 
 #: includes/class-mpc-texts.php:156
-msgctxt "informal"
-msgid "Stores your cookie choices"
+msgid "Cookie policy"
 msgstr ""
 
 #: includes/class-mpc-texts.php:157
+msgid "Privacy notice"
+msgstr ""
+
+#: includes/class-mpc-texts.php:159
+msgid "Allow and show"
+msgstr ""
+
+#: includes/class-mpc-texts.php:161
+msgctxt "informal"
+msgid "Stores your cookie choices"
+msgstr ""
+
+#: includes/class-mpc-texts.php:162
 msgctxt "formal"
 msgid "Stores your cookie choices"
 msgstr ""
 
-#: includes/class-mpc-texts.php:171
+#: includes/class-mpc-texts.php:176
 msgid "Strictly necessary"
 msgstr ""
 
-#: includes/class-mpc-texts.php:173
+#: includes/class-mpc-texts.php:178
 msgctxt "informal"
 msgid "Essential for the website to work, for example to remember your cookie choices or keep you signed in. They cannot be switched off."
-msgstr ""
-
-#: includes/class-mpc-texts.php:174
-msgctxt "formal"
-msgid "Essential for the website to work, for example to remember your cookie choices or keep you signed in. They cannot be switched off."
-msgstr ""
-
-#: includes/class-mpc-texts.php:177
-msgid "Functional"
 msgstr ""
 
 #: includes/class-mpc-texts.php:179
+msgctxt "formal"
+msgid "Essential for the website to work, for example to remember your cookie choices or keep you signed in. They cannot be switched off."
+msgstr ""
+
+#: includes/class-mpc-texts.php:182
+msgid "Functional"
+msgstr ""
+
+#: includes/class-mpc-texts.php:184
 msgctxt "informal"
 msgid "Enable extra features and embedded content from other providers, such as maps and videos, and remember your preferences."
 msgstr ""
 
-#: includes/class-mpc-texts.php:180
+#: includes/class-mpc-texts.php:185
 msgctxt "formal"
 msgid "Enable extra features and embedded content from other providers, such as maps and videos, and remember your preferences."
 msgstr ""
 
-#: includes/class-mpc-texts.php:184
+#: includes/class-mpc-texts.php:189
 msgid "Help us understand how visitors use the website, so we can improve it. The information is collected in aggregate."
 msgstr ""
 
-#: includes/class-mpc-texts.php:189
+#: includes/class-mpc-texts.php:194
 msgctxt "informal"
 msgid "Used to measure the effectiveness of our advertising and to show you relevant ads on other websites."
 msgstr ""
 
-#: includes/class-mpc-texts.php:190
+#: includes/class-mpc-texts.php:195
 msgctxt "formal"
 msgid "Used to measure the effectiveness of our advertising and to show you relevant ads on other websites."
 msgstr ""
 
 #. translators: 1: provider, for example YouTube. 2: cookie category name.
-#: includes/class-mpc-texts.php:205
+#: includes/class-mpc-texts.php:210
 #, php-format
 msgctxt "informal"
 msgid "This content is provided by %1$s and may use cookies. To view it, allow the “%2$s” cookies."
 msgstr ""
 
 #. translators: 1: provider, for example YouTube. 2: cookie category name.
-#: includes/class-mpc-texts.php:207
+#: includes/class-mpc-texts.php:212
 #, php-format
 msgctxt "formal"
 msgid "This content is provided by %1$s and may use cookies. To view it, allow the “%2$s” cookies."
 msgstr ""
 
 #. translators: %d: number of days.
-#: includes/class-mpc-texts.php:220
+#: includes/class-mpc-texts.php:225
 #, php-format
 msgid "%d day"
 msgid_plural "%d days"

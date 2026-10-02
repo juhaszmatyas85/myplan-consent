@@ -95,12 +95,12 @@ msgid "Functional (embedded maps, videos, preferences)"
 msgstr "Funkcionális (beágyazott térképek, videók, beállítások)"
 
 #: includes/class-mpc-admin.php:89
-#: includes/class-mpc-texts.php:183
+#: includes/class-mpc-texts.php:188
 msgid "Analytics"
 msgstr "Statisztikai"
 
 #: includes/class-mpc-admin.php:90
-#: includes/class-mpc-texts.php:187
+#: includes/class-mpc-texts.php:192
 msgid "Marketing"
 msgstr "Marketing"
 
@@ -333,7 +333,7 @@ msgid "We use cookies that are necessary for this website to work. With your con
 msgstr "A weboldal működéséhez szükséges sütiket használunk. Az Ön hozzájárulásával további sütiket és külső szolgáltatásokat is használunk. Döntését bármikor módosíthatja."
 
 #: includes/class-mpc-texts.php:136
-#: includes/class-mpc-texts.php:153
+#: includes/class-mpc-texts.php:158
 msgid "Cookie settings"
 msgstr "Sütibeállítások"
 
@@ -368,105 +368,115 @@ msgid "Always active"
 msgstr "Mindig aktív"
 
 #: includes/class-mpc-texts.php:146
-msgid "Cookies used"
-msgstr "Használt sütik"
+msgid "Cookies and services"
+msgstr "Sütik és szolgáltatások"
 
-#: includes/class-mpc-texts.php:147
+#: includes/class-mpc-texts.php:150
+msgctxt "informal"
+msgid "Used only if you allow this category."
+msgstr "Csak akkor használjuk őket, ha engedélyezed ezt a kategóriát."
+
+#: includes/class-mpc-texts.php:151
+msgctxt "formal"
+msgid "Used only if you allow this category."
+msgstr "Csak akkor használjuk őket, ha engedélyezi ezt a kategóriát."
+
+#: includes/class-mpc-texts.php:152
 msgid "Name"
 msgstr "Név"
 
-#: includes/class-mpc-texts.php:148
+#: includes/class-mpc-texts.php:153
 msgid "Provider"
 msgstr "Szolgáltató"
 
-#: includes/class-mpc-texts.php:149
+#: includes/class-mpc-texts.php:154
 msgid "Purpose"
 msgstr "Cél"
 
-#: includes/class-mpc-texts.php:150
+#: includes/class-mpc-texts.php:155
 msgid "Expiry"
 msgstr "Lejárat"
 
-#: includes/class-mpc-texts.php:151
+#: includes/class-mpc-texts.php:156
 msgid "Cookie policy"
 msgstr "Cookie-szabályzat"
 
-#: includes/class-mpc-texts.php:152
+#: includes/class-mpc-texts.php:157
 msgid "Privacy notice"
 msgstr "Adatkezelési tájékoztató"
 
-#: includes/class-mpc-texts.php:154
+#: includes/class-mpc-texts.php:159
 msgid "Allow and show"
 msgstr "Engedélyezem és megjelenítem"
 
-#: includes/class-mpc-texts.php:156
+#: includes/class-mpc-texts.php:161
 msgctxt "informal"
 msgid "Stores your cookie choices"
 msgstr "A sütikkel kapcsolatos döntésedet tárolja"
 
-#: includes/class-mpc-texts.php:157
+#: includes/class-mpc-texts.php:162
 msgctxt "formal"
 msgid "Stores your cookie choices"
 msgstr "A sütikkel kapcsolatos döntését tárolja"
 
-#: includes/class-mpc-texts.php:171
+#: includes/class-mpc-texts.php:176
 msgid "Strictly necessary"
 msgstr "Feltétlenül szükséges"
 
-#: includes/class-mpc-texts.php:173
+#: includes/class-mpc-texts.php:178
 msgctxt "informal"
 msgid "Essential for the website to work, for example to remember your cookie choices or keep you signed in. They cannot be switched off."
 msgstr "A weboldal működéséhez elengedhetetlenek: például ezek jegyzik meg a sütikkel kapcsolatos döntésedet, vagy tartják fenn a bejelentkezést. Nem kapcsolhatók ki."
 
-#: includes/class-mpc-texts.php:174
+#: includes/class-mpc-texts.php:179
 msgctxt "formal"
 msgid "Essential for the website to work, for example to remember your cookie choices or keep you signed in. They cannot be switched off."
 msgstr "A weboldal működéséhez elengedhetetlenek: például ezek jegyzik meg a sütikkel kapcsolatos döntését, vagy tartják fenn a bejelentkezést. Nem kapcsolhatók ki."
 
-#: includes/class-mpc-texts.php:177
+#: includes/class-mpc-texts.php:182
 msgid "Functional"
 msgstr "Funkcionális"
 
-#: includes/class-mpc-texts.php:179
+#: includes/class-mpc-texts.php:184
 msgctxt "informal"
 msgid "Enable extra features and embedded content from other providers, such as maps and videos, and remember your preferences."
 msgstr "Kiegészítő funkciókat és más szolgáltatóktól származó beágyazott tartalmakat (például térképet, videót) tesznek lehetővé, és megjegyzik a beállításaidat."
 
-#: includes/class-mpc-texts.php:180
+#: includes/class-mpc-texts.php:185
 msgctxt "formal"
 msgid "Enable extra features and embedded content from other providers, such as maps and videos, and remember your preferences."
 msgstr "Kiegészítő funkciókat és más szolgáltatóktól származó beágyazott tartalmakat (például térképet, videót) tesznek lehetővé, és megjegyzik a beállításait."
 
-#: includes/class-mpc-texts.php:184
+#: includes/class-mpc-texts.php:189
 msgid "Help us understand how visitors use the website, so we can improve it. The information is collected in aggregate."
 msgstr "Segítenek megérteni, hogyan használják a látogatók a weboldalt, hogy fejleszthessük. Az adatokat összesítve gyűjtjük."
 
-#: includes/class-mpc-texts.php:189
+#: includes/class-mpc-texts.php:194
 msgctxt "informal"
 msgid "Used to measure the effectiveness of our advertising and to show you relevant ads on other websites."
 msgstr "A hirdetéseink hatékonyságát mérik, és lehetővé teszik, hogy más weboldalakon is számodra releváns hirdetéseket jelenítsünk meg."
 
-#: includes/class-mpc-texts.php:190
+#: includes/class-mpc-texts.php:195
 msgctxt "formal"
 msgid "Used to measure the effectiveness of our advertising and to show you relevant ads on other websites."
 msgstr "A hirdetéseink hatékonyságát mérik, és lehetővé teszik, hogy más weboldalakon is az Ön számára releváns hirdetéseket jelenítsünk meg."
 
 #. translators: 1: provider, for example YouTube. 2: cookie category name.
-#: includes/class-mpc-texts.php:205
+#: includes/class-mpc-texts.php:210
 #, php-format
 msgctxt "informal"
 msgid "This content is provided by %1$s and may use cookies. To view it, allow the “%2$s” cookies."
 msgstr "Ezt a tartalmat a(z) %1$s szolgáltatja, és sütiket használhat. A megtekintéséhez engedélyezd a(z) „%2$s” sütiket."
 
 #. translators: 1: provider, for example YouTube. 2: cookie category name.
-#: includes/class-mpc-texts.php:207
+#: includes/class-mpc-texts.php:212
 #, php-format
 msgctxt "formal"
 msgid "This content is provided by %1$s and may use cookies. To view it, allow the “%2$s” cookies."
 msgstr "Ezt a tartalmat a(z) %1$s szolgáltatja, és sütiket használhat. A megtekintéséhez engedélyezze a(z) „%2$s” sütiket."
 
 #. translators: %d: number of days.
-#: includes/class-mpc-texts.php:220
+#: includes/class-mpc-texts.php:225
 #, php-format
 msgid "%d day"
 msgid_plural "%d days"

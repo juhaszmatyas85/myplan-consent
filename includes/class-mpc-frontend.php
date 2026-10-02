@@ -254,7 +254,13 @@ JS;
 			);
 		}
 
-		return $html . '</tbody></table></div></details>';
+		$html .= '</tbody></table></div>';
+
+		if ( 'necessary' !== $category ) {
+			$html .= '<p class="mpc-cookies__note"' . $nt . '>' . esc_html( $t['only_if_on'] ) . '</p>';
+		}
+
+		return $html . '</details>';
 	}
 
 	/**
