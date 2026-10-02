@@ -194,8 +194,10 @@
 			keepalive: true,
 			credentials: 'same-origin',
 			headers: { 'Content-Type': 'application/json' },
+			// "cid", not "id": CloudPanel's Varnish controller reads a JSON "id"
+			// in any request body as a post to purge.
 			body: JSON.stringify( {
-				id: state.id,
+				cid: state.id,
 				version: cfg.version,
 				action: action,
 				choices: state.c,

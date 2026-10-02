@@ -110,7 +110,7 @@ class MPC_Log {
 		$data = json_decode( (string) file_get_contents( 'php://input' ), true );
 
 		if ( ! is_array( $data )
-			|| empty( $data['id'] ) || ! is_string( $data['id'] ) || ! preg_match( '/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i', $data['id'] )
+			|| empty( $data['cid'] ) || ! is_string( $data['cid'] ) || ! preg_match( '/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i', $data['cid'] )
 			|| ! isset( $data['version'] ) || ! is_numeric( $data['version'] )
 			|| empty( $data['action'] ) || ! in_array( $data['action'], array( 'accept', 'reject', 'custom', 'embed', 'gpc' ), true )
 			|| ! isset( $data['choices'] ) || ! is_array( $data['choices'] ) ) {
@@ -135,7 +135,7 @@ class MPC_Log {
 		$wpdb->insert( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery
 			self::table(),
 			array(
-				'consent_id'     => strtolower( $data['id'] ),
+				'consent_id'     => strtolower( $data['cid'] ),
 				'created'        => current_time( 'mysql', true ),
 				'policy_version' => (int) $data['version'],
 				'action'         => $data['action'],
