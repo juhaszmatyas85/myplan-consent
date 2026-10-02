@@ -1,0 +1,498 @@
+/**
+ * MyPlan Cookie Consent.
+ *
+ * Themed through four custom properties set from the settings:
+ * --mpc-accent, --mpc-bg, --mpc-text, --mpc-radius. Fonts are inherited from
+ * the site. "Accept all" and "Reject all" share one style on purpose: the EDPB
+ * cookie banner taskforce and the NAIH both expect equal prominence.
+ */
+
+.mpc,
+.mpc-embed,
+.mpc-policy-table {
+	--mpc-muted: color-mix( in srgb, var(--mpc-text) 72%, var(--mpc-bg) );
+	--mpc-line: color-mix( in srgb, var(--mpc-text) 16%, var(--mpc-bg) );
+	--mpc-shadow: 0 -8px 40px rgba( 0, 0, 0, 0.14 );
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+.mpc [hidden] {
+	display: none !important;
+}
+
+/* Themes often size every <p>; the banner keeps its own scale. */
+.mpc p,
+.mpc-embed p,
+.mpc-policy-table p {
+	font-size: inherit;
+	line-height: inherit;
+	letter-spacing: normal;
+}
+
+/* Banner ------------------------------------------------------------------ */
+
+.mpc-banner {
+	position: fixed;
+	z-index: 2147483000;
+	box-sizing: border-box;
+	background: var(--mpc-bg);
+	color: var(--mpc-text);
+	box-shadow: var(--mpc-shadow);
+}
+
+/* The banner takes focus only so assistive technology lands on it; it is not
+   a control itself, so it draws no focus ring (its buttons do). */
+.mpc-banner:focus,
+.mpc-banner:focus-visible {
+	outline: none;
+}
+
+.mpc-banner--bar {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-top: 1px solid var(--mpc-line);
+}
+
+.mpc-banner--bar .mpc-banner__inner {
+	display: flex;
+	align-items: center;
+	gap: 24px 40px;
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 22px 24px calc( 22px + env( safe-area-inset-bottom ) );
+}
+
+.mpc-banner--box {
+	left: 20px;
+	bottom: 20px;
+	width: min( 440px, calc( 100vw - 40px ) );
+	border: 1px solid var(--mpc-line);
+	border-radius: var(--mpc-radius);
+}
+
+.mpc-banner--box .mpc-banner__inner {
+	padding: 22px;
+}
+
+.mpc-banner--box .mpc-actions {
+	margin-top: 16px;
+}
+
+.mpc-banner__text {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.mpc-title {
+	margin: 0 0 6px;
+	font-family: inherit;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.3;
+	color: var(--mpc-text);
+}
+
+.mpc-body p {
+	margin: 0 0 6px;
+	color: var(--mpc-muted);
+}
+
+.mpc-links {
+	font-size: 14px;
+}
+
+.mpc-links a,
+.mpc-link {
+	color: var(--mpc-accent);
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+.mpc-link {
+	padding: 0;
+	border: 0;
+	background: none;
+	font: inherit;
+	cursor: pointer;
+}
+
+/* Buttons ----------------------------------------------------------------- */
+
+.mpc-actions {
+	display: flex;
+	flex: 0 0 auto;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.mpc .mpc-btn,
+.mpc-embed .mpc-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 44px;
+	margin: 0;
+	padding: 10px 20px;
+	border: 2px solid var(--mpc-accent);
+	border-radius: var(--mpc-radius);
+	background: var(--mpc-accent);
+	color: var(--mpc-bg);
+	font: inherit;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1.2;
+	text-align: center;
+	text-transform: none;
+	letter-spacing: normal;
+	box-shadow: none;
+	cursor: pointer;
+	transition: filter 0.15s;
+}
+
+.mpc .mpc-btn:hover,
+.mpc-embed .mpc-btn:hover {
+	filter: brightness( 0.92 );
+}
+
+.mpc .mpc-btn--ghost {
+	background: transparent;
+	color: var(--mpc-accent);
+}
+
+.mpc .mpc-btn--ghost:hover {
+	background: color-mix( in srgb, var(--mpc-accent) 8%, transparent );
+	filter: none;
+}
+
+.mpc .mpc-btn:focus-visible,
+.mpc-embed .mpc-btn:focus-visible,
+.mpc-embed .mpc-link:focus-visible,
+.mpc .mpc-close:focus-visible,
+.mpc .mpc-link:focus-visible,
+.mpc .mpc-float:focus-visible,
+.mpc .mpc-switch:focus-visible,
+.mpc summary:focus-visible,
+.mpc a:focus-visible {
+	outline: 3px solid var(--mpc-accent);
+	outline-offset: 2px;
+}
+
+/* Dialog ------------------------------------------------------------------ */
+
+.mpc-modal {
+	box-sizing: border-box;
+	width: min( 640px, calc( 100vw - 24px ) );
+	max-height: min( 88vh, 860px );
+	margin: auto;
+	padding: 0;
+	border: 0;
+	border-radius: var(--mpc-radius);
+	background: var(--mpc-bg);
+	color: var(--mpc-text);
+	box-shadow: 0 24px 80px rgba( 0, 0, 0, 0.3 );
+}
+
+.mpc-modal::backdrop {
+	background: rgba( 0, 0, 0, 0.45 );
+}
+
+.mpc-modal[open] {
+	display: flex;
+}
+
+.mpc-modal__inner {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-height: inherit;
+}
+
+.mpc-modal__head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 20px 24px 12px;
+}
+
+.mpc-modal__head .mpc-title {
+	margin: 0;
+	font-size: 21px;
+}
+
+.mpc .mpc-close {
+	width: 44px;
+	height: 44px;
+	margin: -8px -10px -8px 0;
+	padding: 0;
+	border: 0;
+	border-radius: var(--mpc-radius);
+	background: transparent;
+	color: var(--mpc-text);
+	font-size: 28px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.mpc-modal__body {
+	overflow-y: auto;
+	padding: 0 24px 8px;
+	overscroll-behavior: contain;
+}
+
+.mpc-modal__foot {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 10px;
+	padding: 16px 24px 20px;
+	border-top: 1px solid var(--mpc-line);
+}
+
+.mpc-cat {
+	padding: 16px 0;
+	border-top: 1px solid var(--mpc-line);
+}
+
+.mpc-body + .mpc-cat {
+	margin-top: 12px;
+}
+
+.mpc-cat__head {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.mpc-cat__name {
+	flex: 1 1 auto;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.mpc-cat__always {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--mpc-accent);
+}
+
+.mpc-cat__always + .mpc-switch {
+	display: none;
+}
+
+.mpc-cat__desc {
+	margin: 6px 0 0;
+	font-size: 14px;
+	color: var(--mpc-muted);
+}
+
+/* Switch: a native checkbox, so keyboard and screen readers work as usual. */
+.mpc .mpc-switch {
+	position: relative;
+	flex: 0 0 auto;
+	width: 48px;
+	height: 28px;
+	margin: 0;
+	border: 2px solid var(--mpc-muted);
+	border-radius: 999px;
+	background: var(--mpc-bg);
+	appearance: none;
+	-webkit-appearance: none;
+	cursor: pointer;
+	transition: background 0.15s, border-color 0.15s;
+}
+
+.mpc .mpc-switch::after {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: var(--mpc-muted);
+	content: "";
+	transition: transform 0.15s, background 0.15s;
+}
+
+.mpc .mpc-switch:checked {
+	border-color: var(--mpc-accent);
+	background: var(--mpc-accent);
+}
+
+.mpc .mpc-switch:checked::after {
+	transform: translateX( 20px );
+	background: var(--mpc-bg);
+}
+
+/* Cookie table ------------------------------------------------------------ */
+
+.mpc-cookies {
+	margin-top: 10px;
+	font-size: 13px;
+}
+
+.mpc-cookies summary {
+	color: var(--mpc-accent);
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.mpc-cookies__scroll {
+	overflow-x: auto;
+	margin-top: 8px;
+}
+
+.mpc-cookies table {
+	width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+}
+
+.mpc-cookies th,
+.mpc-cookies td {
+	padding: 6px 8px;
+	border: 1px solid var(--mpc-line);
+	text-align: left;
+	vertical-align: top;
+}
+
+.mpc-cookies code {
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+/* Floating button ----------------------------------------------------------- */
+
+.mpc .mpc-float {
+	position: fixed;
+	left: 16px;
+	bottom: 16px;
+	z-index: 2147482999;
+	display: grid;
+	place-items: center;
+	width: 44px;
+	height: 44px;
+	margin: 0;
+	padding: 0;
+	border: 1px solid var(--mpc-line);
+	border-radius: 50%;
+	background: var(--mpc-bg);
+	color: var(--mpc-accent);
+	box-shadow: 0 4px 16px rgba( 0, 0, 0, 0.18 );
+	cursor: pointer;
+}
+
+/* Blocked embed ------------------------------------------------------------- */
+
+.mpc-embed {
+	position: relative;
+}
+
+.mpc-embed:not(.is-allowed) iframe {
+	display: none;
+}
+
+.mpc-embed.is-allowed .mpc-embed__placeholder {
+	display: none;
+}
+
+.mpc-embed__placeholder {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	min-height: 220px;
+	aspect-ratio: var(--mpc-ratio, 16 / 9);
+	padding: 24px;
+	border: 1px solid var(--mpc-line);
+	border-radius: var(--mpc-radius);
+	background: color-mix( in srgb, var(--mpc-text) 5%, var(--mpc-bg) );
+	color: var(--mpc-text);
+	font-size: 15px;
+	text-align: center;
+}
+
+.mpc-embed__placeholder p {
+	max-width: 520px;
+	margin: 0 0 12px;
+}
+
+.mpc-embed__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 8px 16px;
+}
+
+/* Small screens --------------------------------------------------------------- */
+
+@media ( max-width: 760px ) {
+	.mpc {
+		font-size: 14px;
+	}
+
+	.mpc-title {
+		font-size: 16px;
+	}
+
+	.mpc-banner .mpc-body p {
+		line-height: 1.45;
+	}
+
+	.mpc .mpc-btn {
+		min-height: 44px;
+		padding: 8px 12px;
+		font-size: 14px;
+	}
+
+	.mpc-banner--bar .mpc-banner__inner {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 14px;
+		padding: 18px 16px calc( 16px + env( safe-area-inset-bottom ) );
+	}
+
+	.mpc-banner--box {
+		left: 10px;
+		bottom: 10px;
+		width: calc( 100vw - 20px );
+	}
+
+	.mpc-actions {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	/* Settings spans the row; the two decisions sit side by side, equal. */
+	.mpc-actions .mpc-btn--ghost {
+		grid-column: 1 / -1;
+		order: 3;
+	}
+
+	.mpc-modal__foot {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.mpc-modal__foot .mpc-btn--ghost {
+		grid-column: 1 / -1;
+		order: 3;
+	}
+}
+
+@media ( prefers-reduced-motion: reduce ) {
+	.mpc *,
+	.mpc *::after {
+		transition: none !important;
+	}
+}
+
+/* Policy page table ([mpc_cookie_table]) ------------------------------------- */
+
+.mpc-policy-table .mpc-cookies summary {
+	display: none;
+}

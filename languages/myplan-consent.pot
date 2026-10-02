@@ -1,0 +1,480 @@
+# Copyright (C) 2026 MyPlan
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: MyPlan Cookie Consent 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/myplan-consent\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-02T15:46:30+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: myplan-consent\n"
+
+#. Plugin Name of the plugin
+#: myplan-consent.php
+msgid "MyPlan Cookie Consent"
+msgstr ""
+
+#. Description of the plugin
+#: myplan-consent.php
+msgid "GDPR cookie banner with Google Consent Mode v2 (advanced and basic), script and embed blocking, consent log and WP Consent API support. Translatable with gettext, WPML, Polylang and TranslatePress."
+msgstr ""
+
+#. Author of the plugin
+#: myplan-consent.php
+msgid "MyPlan"
+msgstr ""
+
+#: includes/class-mpc-admin.php:32
+#: includes/class-mpc-admin.php:33
+#: includes/class-mpc-admin.php:231
+msgid "Cookie consent"
+msgstr ""
+
+#: includes/class-mpc-admin.php:47
+#: includes/class-mpc-texts.php:142
+msgid "Settings"
+msgstr ""
+
+#: includes/class-mpc-admin.php:67
+msgid "General"
+msgstr ""
+
+#: includes/class-mpc-admin.php:69
+msgid "Show the banner and apply consent"
+msgstr ""
+
+#: includes/class-mpc-admin.php:72
+msgid "Google Consent Mode"
+msgstr ""
+
+#: includes/class-mpc-admin.php:74
+msgid "Advanced: Google tags load at once with consent denied (cookieless pings, modelled conversions)"
+msgstr ""
+
+#: includes/class-mpc-admin.php:75
+msgid "Basic: Google tags load only after consent"
+msgstr ""
+
+#: includes/class-mpc-admin.php:78
+msgid "Google Tag Manager ID"
+msgstr ""
+
+#: includes/class-mpc-admin.php:78
+msgid "GTM-XXXXXXX. Leave empty if another plugin or the theme loads it; the consent defaults still come first."
+msgstr ""
+
+#: includes/class-mpc-admin.php:79
+msgid "Google Analytics 4 ID"
+msgstr ""
+
+#: includes/class-mpc-admin.php:79
+msgid "G-XXXXXXXXXX. Only if GA4 is not loaded through Tag Manager."
+msgstr ""
+
+#: includes/class-mpc-admin.php:80
+msgid "Redact ad click identifiers while ad consent is denied (ads_data_redaction)"
+msgstr ""
+
+#: includes/class-mpc-admin.php:81
+msgid "Pass ad click information through URLs while consent is denied (url_passthrough)"
+msgstr ""
+
+#: includes/class-mpc-admin.php:82
+msgid "wait_for_update (ms)"
+msgstr ""
+
+#: includes/class-mpc-admin.php:82
+msgid "How long Google tags wait for a stored choice before firing."
+msgstr ""
+
+#: includes/class-mpc-admin.php:86
+msgid "Categories and cookies"
+msgstr ""
+
+#: includes/class-mpc-admin.php:88
+msgid "Functional (embedded maps, videos, preferences)"
+msgstr ""
+
+#: includes/class-mpc-admin.php:89
+#: includes/class-mpc-texts.php:183
+msgid "Analytics"
+msgstr ""
+
+#: includes/class-mpc-admin.php:90
+#: includes/class-mpc-texts.php:187
+msgid "Marketing"
+msgstr ""
+
+#: includes/class-mpc-admin.php:91
+msgid "Strictly necessary cookies"
+msgstr ""
+
+#: includes/class-mpc-admin.php:91
+msgid "One per line: name | provider | purpose | expiry. The consent cookie itself is always listed."
+msgstr ""
+
+#: includes/class-mpc-admin.php:92
+msgid "Functional cookies"
+msgstr ""
+
+#: includes/class-mpc-admin.php:93
+msgid "Analytics cookies"
+msgstr ""
+
+#: includes/class-mpc-admin.php:94
+msgid "Marketing cookies"
+msgstr ""
+
+#: includes/class-mpc-admin.php:94
+msgid "Listed cookies are also deleted when a visitor withdraws the category (a trailing * matches a prefix)."
+msgstr ""
+
+#: includes/class-mpc-admin.php:98
+msgid "Blocking"
+msgstr ""
+
+#: includes/class-mpc-admin.php:100
+msgid "Script handles"
+msgstr ""
+
+#: includes/class-mpc-admin.php:100
+msgid "One per line: handle = category. These enqueued scripts run only after consent. In your own markup use <script type=\"text/plain\" data-mpc-consent=\"analytics\">."
+msgstr ""
+
+#: includes/class-mpc-admin.php:101
+msgid "Embed rules"
+msgstr ""
+
+#: includes/class-mpc-admin.php:101
+msgid "One per line: address fragment = category | provider. Matching iframes in content get a placeholder until consent. Themes can use mpc_embed( $iframe )."
+msgstr ""
+
+#: includes/class-mpc-admin.php:105
+msgid "Appearance and texts"
+msgstr ""
+
+#: includes/class-mpc-admin.php:109
+msgid "Form of address"
+msgstr ""
+
+#: includes/class-mpc-admin.php:111
+msgid "Formal"
+msgstr ""
+
+#: includes/class-mpc-admin.php:112
+msgid "Informal"
+msgstr ""
+
+#: includes/class-mpc-admin.php:117
+msgid "Banner position"
+msgstr ""
+
+#: includes/class-mpc-admin.php:119
+msgid "Bar along the bottom"
+msgstr ""
+
+#: includes/class-mpc-admin.php:120
+msgid "Box in the bottom left corner"
+msgstr ""
+
+#: includes/class-mpc-admin.php:123
+msgid "Show a floating button to reopen the settings"
+msgstr ""
+
+#: includes/class-mpc-admin.php:123
+msgid "Without it, put [mpc_settings_link] or a link to #cookie-settings in the footer: withdrawing consent must be as easy as giving it."
+msgstr ""
+
+#: includes/class-mpc-admin.php:124
+msgid "Accent colour"
+msgstr ""
+
+#: includes/class-mpc-admin.php:125
+msgid "Background colour"
+msgstr ""
+
+#: includes/class-mpc-admin.php:126
+msgid "Text colour"
+msgstr ""
+
+#: includes/class-mpc-admin.php:127
+msgid "Corner radius (px)"
+msgstr ""
+
+#: includes/class-mpc-admin.php:128
+msgid "Banner title"
+msgstr ""
+
+#: includes/class-mpc-admin.php:128
+msgid "Leave the texts empty to use the built-in, translated wording."
+msgstr ""
+
+#: includes/class-mpc-admin.php:129
+msgid "Banner text"
+msgstr ""
+
+#: includes/class-mpc-admin.php:130
+msgid "Settings dialog introduction"
+msgstr ""
+
+#: includes/class-mpc-admin.php:131
+msgid "Cookie policy page"
+msgstr ""
+
+#: includes/class-mpc-admin.php:132
+msgid "Privacy notice page"
+msgstr ""
+
+#: includes/class-mpc-admin.php:136
+msgid "Consent validity and log"
+msgstr ""
+
+#: includes/class-mpc-admin.php:138
+msgid "Ask again after (days)"
+msgstr ""
+
+#: includes/class-mpc-admin.php:138
+msgid "Applies to refusals too. Recommended: 180 (6 months): the EU Digital Omnibus proposal bars asking again within six months of a refusal. At most 395 (13 months)."
+msgstr ""
+
+#: includes/class-mpc-admin.php:139
+msgid "Ask every visitor again on save"
+msgstr ""
+
+#: includes/class-mpc-admin.php:139
+msgid "Use when the categories or the purposes change."
+msgstr ""
+
+#: includes/class-mpc-admin.php:140
+msgid "Treat the browser’s Global Privacy Control signal as “reject all”"
+msgstr ""
+
+#: includes/class-mpc-admin.php:140
+msgid "The EU Digital Omnibus proposal would make browser-level signals binding; honouring them now is safe, since refusal is the default anyway."
+msgstr ""
+
+#: includes/class-mpc-admin.php:141
+msgid "Keep a consent log (no IP address is stored)"
+msgstr ""
+
+#: includes/class-mpc-admin.php:142
+msgid "Keep log entries for (days)"
+msgstr ""
+
+#: includes/class-mpc-admin.php:182
+msgid "On"
+msgstr ""
+
+#: includes/class-mpc-admin.php:206
+msgid "— None —"
+msgstr ""
+
+#: includes/class-mpc-admin.php:234
+msgid "Decisions in the last 30 days"
+msgstr ""
+
+#. translators: 1: accept all count, 2: reject all count, 3: custom choice count, 4: count of embeds allowed one by one, 5: count of Global Privacy Control refusals.
+#: includes/class-mpc-admin.php:239
+#, php-format
+msgid "Accepted all: %1$d · Rejected all: %2$d · Custom choice: %3$d · Allowed from an embed: %4$d · Browser refusal (GPC): %5$d"
+msgstr ""
+
+#: includes/class-mpc-admin.php:249
+msgid "Download the consent log (CSV)"
+msgstr ""
+
+#. translators: %d: policy version number.
+#: includes/class-mpc-admin.php:253
+#, php-format
+msgid "Current policy version: %d"
+msgstr ""
+
+#: includes/class-mpc-admin.php:276
+msgid "You are not allowed to do this."
+msgstr ""
+
+#: includes/class-mpc-settings.php:54
+msgid "Distinguishes visitors"
+msgstr ""
+
+#: includes/class-mpc-settings.php:54
+#: includes/class-mpc-settings.php:55
+msgid "2 years"
+msgstr ""
+
+#: includes/class-mpc-settings.php:55
+msgid "Keeps the session state"
+msgstr ""
+
+#: includes/class-mpc-settings.php:56
+msgid "Measures ad conversions"
+msgstr ""
+
+#: includes/class-mpc-settings.php:56
+#: includes/class-mpc-settings.php:57
+msgid "90 days"
+msgstr ""
+
+#: includes/class-mpc-settings.php:57
+msgid "Measures ad performance"
+msgstr ""
+
+#: includes/class-mpc-texts.php:132
+msgid "Cookies on this website"
+msgstr ""
+
+#: includes/class-mpc-texts.php:134
+msgctxt "informal"
+msgid "We use cookies that are necessary for this website to work. With your consent, we also use optional cookies and third-party services. You can change your decision at any time."
+msgstr ""
+
+#: includes/class-mpc-texts.php:135
+msgctxt "formal"
+msgid "We use cookies that are necessary for this website to work. With your consent, we also use optional cookies and third-party services. You can change your decision at any time."
+msgstr ""
+
+#: includes/class-mpc-texts.php:136
+#: includes/class-mpc-texts.php:153
+msgid "Cookie settings"
+msgstr ""
+
+#: includes/class-mpc-texts.php:138
+msgctxt "informal"
+msgid "Choose which categories of cookies you allow. Strictly necessary cookies are always active, because the website cannot work without them. You can change your decision at any time with the cookie settings button or link."
+msgstr ""
+
+#: includes/class-mpc-texts.php:139
+msgctxt "formal"
+msgid "Choose which categories of cookies you allow. Strictly necessary cookies are always active, because the website cannot work without them. You can change your decision at any time with the cookie settings button or link."
+msgstr ""
+
+#: includes/class-mpc-texts.php:140
+msgid "Accept all"
+msgstr ""
+
+#: includes/class-mpc-texts.php:141
+msgid "Reject all"
+msgstr ""
+
+#: includes/class-mpc-texts.php:143
+msgid "Save my choices"
+msgstr ""
+
+#: includes/class-mpc-texts.php:144
+msgid "Close"
+msgstr ""
+
+#: includes/class-mpc-texts.php:145
+msgid "Always active"
+msgstr ""
+
+#: includes/class-mpc-texts.php:146
+msgid "Cookies used"
+msgstr ""
+
+#: includes/class-mpc-texts.php:147
+msgid "Name"
+msgstr ""
+
+#: includes/class-mpc-texts.php:148
+msgid "Provider"
+msgstr ""
+
+#: includes/class-mpc-texts.php:149
+msgid "Purpose"
+msgstr ""
+
+#: includes/class-mpc-texts.php:150
+msgid "Expiry"
+msgstr ""
+
+#: includes/class-mpc-texts.php:151
+msgid "Cookie policy"
+msgstr ""
+
+#: includes/class-mpc-texts.php:152
+msgid "Privacy notice"
+msgstr ""
+
+#: includes/class-mpc-texts.php:154
+msgid "Allow and show"
+msgstr ""
+
+#: includes/class-mpc-texts.php:156
+msgctxt "informal"
+msgid "Stores your cookie choices"
+msgstr ""
+
+#: includes/class-mpc-texts.php:157
+msgctxt "formal"
+msgid "Stores your cookie choices"
+msgstr ""
+
+#: includes/class-mpc-texts.php:171
+msgid "Strictly necessary"
+msgstr ""
+
+#: includes/class-mpc-texts.php:173
+msgctxt "informal"
+msgid "Essential for the website to work, for example to remember your cookie choices or keep you signed in. They cannot be switched off."
+msgstr ""
+
+#: includes/class-mpc-texts.php:174
+msgctxt "formal"
+msgid "Essential for the website to work, for example to remember your cookie choices or keep you signed in. They cannot be switched off."
+msgstr ""
+
+#: includes/class-mpc-texts.php:177
+msgid "Functional"
+msgstr ""
+
+#: includes/class-mpc-texts.php:179
+msgctxt "informal"
+msgid "Enable extra features and embedded content from other providers, such as maps and videos, and remember your preferences."
+msgstr ""
+
+#: includes/class-mpc-texts.php:180
+msgctxt "formal"
+msgid "Enable extra features and embedded content from other providers, such as maps and videos, and remember your preferences."
+msgstr ""
+
+#: includes/class-mpc-texts.php:184
+msgid "Help us understand how visitors use the website, so we can improve it. The information is collected in aggregate."
+msgstr ""
+
+#: includes/class-mpc-texts.php:189
+msgctxt "informal"
+msgid "Used to measure the effectiveness of our advertising and to show you relevant ads on other websites."
+msgstr ""
+
+#: includes/class-mpc-texts.php:190
+msgctxt "formal"
+msgid "Used to measure the effectiveness of our advertising and to show you relevant ads on other websites."
+msgstr ""
+
+#. translators: 1: provider, for example YouTube. 2: cookie category name.
+#: includes/class-mpc-texts.php:205
+#, php-format
+msgctxt "informal"
+msgid "This content is provided by %1$s and may use cookies. To view it, allow the “%2$s” cookies."
+msgstr ""
+
+#. translators: 1: provider, for example YouTube. 2: cookie category name.
+#: includes/class-mpc-texts.php:207
+#, php-format
+msgctxt "formal"
+msgid "This content is provided by %1$s and may use cookies. To view it, allow the “%2$s” cookies."
+msgstr ""
+
+#. translators: %d: number of days.
+#: includes/class-mpc-texts.php:220
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""

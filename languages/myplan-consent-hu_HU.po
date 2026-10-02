@@ -1,0 +1,474 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MyPlan Cookie Consent 1.0.0\n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: myplan-consent\n"
+
+#. Plugin Name of the plugin
+#: myplan-consent.php
+msgid "MyPlan Cookie Consent"
+msgstr "MyPlan Cookie Consent"
+
+#. Description of the plugin
+#: myplan-consent.php
+msgid "GDPR cookie banner with Google Consent Mode v2 (advanced and basic), script and embed blocking, consent log and WP Consent API support. Translatable with gettext, WPML, Polylang and TranslatePress."
+msgstr "GDPR-kompatibilis sütisáv Google Consent Mode v2-vel (advanced és basic), szkript- és beágyazásblokkolással, hozzájárulási naplóval és WP Consent API-támogatással. Fordítható gettexttel, WPML-lel, Polylanggal és TranslatePress-szel."
+
+#. Author of the plugin
+#: myplan-consent.php
+msgid "MyPlan"
+msgstr "MyPlan"
+
+#: includes/class-mpc-admin.php:32
+#: includes/class-mpc-admin.php:33
+#: includes/class-mpc-admin.php:231
+msgid "Cookie consent"
+msgstr "Sütikezelés"
+
+#: includes/class-mpc-admin.php:47
+#: includes/class-mpc-texts.php:142
+msgid "Settings"
+msgstr "Beállítások"
+
+#: includes/class-mpc-admin.php:67
+msgid "General"
+msgstr "Általános"
+
+#: includes/class-mpc-admin.php:69
+msgid "Show the banner and apply consent"
+msgstr "A sütisáv megjelenítése és a hozzájárulás érvényesítése"
+
+#: includes/class-mpc-admin.php:72
+msgid "Google Consent Mode"
+msgstr "Google Consent Mode"
+
+#: includes/class-mpc-admin.php:74
+msgid "Advanced: Google tags load at once with consent denied (cookieless pings, modelled conversions)"
+msgstr "Advanced: a Google-címkék azonnal betöltődnek, megtagadott hozzájárulással (süti nélküli pingek, modellezett konverziók)"
+
+#: includes/class-mpc-admin.php:75
+msgid "Basic: Google tags load only after consent"
+msgstr "Basic: a Google-címkék csak hozzájárulás után töltődnek be"
+
+#: includes/class-mpc-admin.php:78
+msgid "Google Tag Manager ID"
+msgstr "Google Tag Manager azonosító"
+
+#: includes/class-mpc-admin.php:78
+msgid "GTM-XXXXXXX. Leave empty if another plugin or the theme loads it; the consent defaults still come first."
+msgstr "GTM-XXXXXXX. Hagyd üresen, ha más plugin vagy a téma tölti be; az alapértelmezett hozzájárulási állapot akkor is elsőként kerül ki."
+
+#: includes/class-mpc-admin.php:79
+msgid "Google Analytics 4 ID"
+msgstr "Google Analytics 4 azonosító"
+
+#: includes/class-mpc-admin.php:79
+msgid "G-XXXXXXXXXX. Only if GA4 is not loaded through Tag Manager."
+msgstr "G-XXXXXXXXXX. Csak ha a GA4 nem a Tag Manageren keresztül töltődik be."
+
+#: includes/class-mpc-admin.php:80
+msgid "Redact ad click identifiers while ad consent is denied (ads_data_redaction)"
+msgstr "Hirdetési kattintásazonosítók kitakarása, amíg a hirdetési hozzájárulás nincs megadva (ads_data_redaction)"
+
+#: includes/class-mpc-admin.php:81
+msgid "Pass ad click information through URLs while consent is denied (url_passthrough)"
+msgstr "Hirdetési kattintásadatok továbbítása URL-ben, amíg nincs hozzájárulás (url_passthrough)"
+
+#: includes/class-mpc-admin.php:82
+msgid "wait_for_update (ms)"
+msgstr "wait_for_update (ms)"
+
+#: includes/class-mpc-admin.php:82
+msgid "How long Google tags wait for a stored choice before firing."
+msgstr "Ennyit várnak a Google-címkék a tárolt döntésre, mielőtt lefutnak."
+
+#: includes/class-mpc-admin.php:86
+msgid "Categories and cookies"
+msgstr "Kategóriák és sütik"
+
+#: includes/class-mpc-admin.php:88
+msgid "Functional (embedded maps, videos, preferences)"
+msgstr "Funkcionális (beágyazott térképek, videók, beállítások)"
+
+#: includes/class-mpc-admin.php:89
+#: includes/class-mpc-texts.php:183
+msgid "Analytics"
+msgstr "Statisztikai"
+
+#: includes/class-mpc-admin.php:90
+#: includes/class-mpc-texts.php:187
+msgid "Marketing"
+msgstr "Marketing"
+
+#: includes/class-mpc-admin.php:91
+msgid "Strictly necessary cookies"
+msgstr "Feltétlenül szükséges sütik"
+
+#: includes/class-mpc-admin.php:91
+msgid "One per line: name | provider | purpose | expiry. The consent cookie itself is always listed."
+msgstr "Soronként egy: név | szolgáltató | cél | lejárat. A hozzájárulást tároló süti mindig szerepel a listában."
+
+#: includes/class-mpc-admin.php:92
+msgid "Functional cookies"
+msgstr "Funkcionális sütik"
+
+#: includes/class-mpc-admin.php:93
+msgid "Analytics cookies"
+msgstr "Statisztikai sütik"
+
+#: includes/class-mpc-admin.php:94
+msgid "Marketing cookies"
+msgstr "Marketing sütik"
+
+#: includes/class-mpc-admin.php:94
+msgid "Listed cookies are also deleted when a visitor withdraws the category (a trailing * matches a prefix)."
+msgstr "A felsorolt sütiket a plugin törli is, ha a látogató visszavonja a kategóriát (a végén * előtag-egyezést jelent)."
+
+#: includes/class-mpc-admin.php:98
+msgid "Blocking"
+msgstr "Blokkolás"
+
+#: includes/class-mpc-admin.php:100
+msgid "Script handles"
+msgstr "Szkript-azonosítók (handle)"
+
+#: includes/class-mpc-admin.php:100
+msgid "One per line: handle = category. These enqueued scripts run only after consent. In your own markup use <script type=\"text/plain\" data-mpc-consent=\"analytics\">."
+msgstr "Soronként egy: handle = kategória. Ezek a betöltött szkriptek csak hozzájárulás után futnak. Saját kódban: <script type=\"text/plain\" data-mpc-consent=\"analytics\">."
+
+#: includes/class-mpc-admin.php:101
+msgid "Embed rules"
+msgstr "Beágyazási szabályok"
+
+#: includes/class-mpc-admin.php:101
+msgid "One per line: address fragment = category | provider. Matching iframes in content get a placeholder until consent. Themes can use mpc_embed( $iframe )."
+msgstr "Soronként egy: címrészlet = kategória | szolgáltató. Az illeszkedő iframe-ek helyén hozzájárulásig helyőrző jelenik meg. Témákban: mpc_embed( $iframe )."
+
+#: includes/class-mpc-admin.php:105
+msgid "Appearance and texts"
+msgstr "Megjelenés és szövegek"
+
+#: includes/class-mpc-admin.php:109
+msgid "Form of address"
+msgstr "Megszólítás"
+
+#: includes/class-mpc-admin.php:111
+msgid "Formal"
+msgstr "Magázó"
+
+#: includes/class-mpc-admin.php:112
+msgid "Informal"
+msgstr "Tegező"
+
+#: includes/class-mpc-admin.php:117
+msgid "Banner position"
+msgstr "A sáv helye"
+
+#: includes/class-mpc-admin.php:119
+msgid "Bar along the bottom"
+msgstr "Sáv az oldal alján"
+
+#: includes/class-mpc-admin.php:120
+msgid "Box in the bottom left corner"
+msgstr "Doboz a bal alsó sarokban"
+
+#: includes/class-mpc-admin.php:123
+msgid "Show a floating button to reopen the settings"
+msgstr "Lebegő gomb a beállítások újbóli megnyitásához"
+
+#: includes/class-mpc-admin.php:123
+msgid "Without it, put [mpc_settings_link] or a link to #cookie-settings in the footer: withdrawing consent must be as easy as giving it."
+msgstr "Nélküle tegyél a láblécbe [mpc_settings_link] rövidkódot vagy #cookie-settings hivatkozást: a hozzájárulás visszavonása legyen olyan egyszerű, mint a megadása."
+
+#: includes/class-mpc-admin.php:124
+msgid "Accent colour"
+msgstr "Kiemelőszín"
+
+#: includes/class-mpc-admin.php:125
+msgid "Background colour"
+msgstr "Háttérszín"
+
+#: includes/class-mpc-admin.php:126
+msgid "Text colour"
+msgstr "Szövegszín"
+
+#: includes/class-mpc-admin.php:127
+msgid "Corner radius (px)"
+msgstr "Saroklekerekítés (px)"
+
+#: includes/class-mpc-admin.php:128
+msgid "Banner title"
+msgstr "A sáv címe"
+
+#: includes/class-mpc-admin.php:128
+msgid "Leave the texts empty to use the built-in, translated wording."
+msgstr "Üresen hagyva a beépített, lefordított szöveg jelenik meg."
+
+#: includes/class-mpc-admin.php:129
+msgid "Banner text"
+msgstr "A sáv szövege"
+
+#: includes/class-mpc-admin.php:130
+msgid "Settings dialog introduction"
+msgstr "A beállítások ablak bevezetője"
+
+#: includes/class-mpc-admin.php:131
+msgid "Cookie policy page"
+msgstr "Cookie-szabályzat oldal"
+
+#: includes/class-mpc-admin.php:132
+msgid "Privacy notice page"
+msgstr "Adatkezelési tájékoztató oldal"
+
+#: includes/class-mpc-admin.php:136
+msgid "Consent validity and log"
+msgstr "A hozzájárulás érvényessége és naplója"
+
+#: includes/class-mpc-admin.php:138
+msgid "Ask again after (days)"
+msgstr "Újrakérdezés ennyi nap után"
+
+#: includes/class-mpc-admin.php:138
+msgid "Applies to refusals too. Recommended: 180 (6 months): the EU Digital Omnibus proposal bars asking again within six months of a refusal. At most 395 (13 months)."
+msgstr "Az elutasításra is vonatkozik. Javasolt: 180 (6 hónap): az uniós Digital Omnibus javaslat szerint elutasítás után hat hónapon belül nem szabad újra kérdezni. Legfeljebb 395 (13 hónap)."
+
+#: includes/class-mpc-admin.php:139
+msgid "Ask every visitor again on save"
+msgstr "Mentéskor minden látogató újra döntsön"
+
+#: includes/class-mpc-admin.php:139
+msgid "Use when the categories or the purposes change."
+msgstr "Akkor használd, ha a kategóriák vagy a célok megváltoznak."
+
+#: includes/class-mpc-admin.php:140
+msgid "Treat the browser’s Global Privacy Control signal as “reject all”"
+msgstr "A böngésző Global Privacy Control jelzése „mindet elutasítom”-nak számít"
+
+#: includes/class-mpc-admin.php:140
+msgid "The EU Digital Omnibus proposal would make browser-level signals binding; honouring them now is safe, since refusal is the default anyway."
+msgstr "Az uniós Digital Omnibus javaslat kötelezővé tenné a böngészőszintű jelzések figyelembevételét; már most biztonságos, hiszen az elutasítás amúgy is az alapállapot."
+
+#: includes/class-mpc-admin.php:141
+msgid "Keep a consent log (no IP address is stored)"
+msgstr "Hozzájárulási napló vezetése (IP-cím nélkül)"
+
+#: includes/class-mpc-admin.php:142
+msgid "Keep log entries for (days)"
+msgstr "Naplóbejegyzések megőrzése (nap)"
+
+#: includes/class-mpc-admin.php:182
+msgid "On"
+msgstr "Be"
+
+#: includes/class-mpc-admin.php:206
+msgid "— None —"
+msgstr "— Nincs —"
+
+#: includes/class-mpc-admin.php:234
+msgid "Decisions in the last 30 days"
+msgstr "Döntések az elmúlt 30 napban"
+
+#. translators: 1: accept all count, 2: reject all count, 3: custom choice count, 4: count of embeds allowed one by one, 5: count of Global Privacy Control refusals.
+#: includes/class-mpc-admin.php:239
+#, php-format
+msgid "Accepted all: %1$d · Rejected all: %2$d · Custom choice: %3$d · Allowed from an embed: %4$d · Browser refusal (GPC): %5$d"
+msgstr "Mindet elfogadta: %1$d · Mindet elutasította: %2$d · Egyéni választás: %3$d · Beágyazásból engedélyezte: %4$d · Böngésző-elutasítás (GPC): %5$d"
+
+#: includes/class-mpc-admin.php:249
+msgid "Download the consent log (CSV)"
+msgstr "Hozzájárulási napló letöltése (CSV)"
+
+#. translators: %d: policy version number.
+#: includes/class-mpc-admin.php:253
+#, php-format
+msgid "Current policy version: %d"
+msgstr "Jelenlegi szabályzatverzió: %d"
+
+#: includes/class-mpc-admin.php:276
+msgid "You are not allowed to do this."
+msgstr "Ehhez nincs jogosultságod."
+
+#: includes/class-mpc-settings.php:54
+msgid "Distinguishes visitors"
+msgstr "Megkülönbözteti a látogatókat"
+
+#: includes/class-mpc-settings.php:54
+#: includes/class-mpc-settings.php:55
+msgid "2 years"
+msgstr "2 év"
+
+#: includes/class-mpc-settings.php:55
+msgid "Keeps the session state"
+msgstr "A munkamenet állapotát tárolja"
+
+#: includes/class-mpc-settings.php:56
+msgid "Measures ad conversions"
+msgstr "A hirdetési konverziókat méri"
+
+#: includes/class-mpc-settings.php:56
+#: includes/class-mpc-settings.php:57
+msgid "90 days"
+msgstr "90 nap"
+
+#: includes/class-mpc-settings.php:57
+msgid "Measures ad performance"
+msgstr "A hirdetések teljesítményét méri"
+
+#: includes/class-mpc-texts.php:132
+msgid "Cookies on this website"
+msgstr "Sütik a weboldalon"
+
+#: includes/class-mpc-texts.php:134
+msgctxt "informal"
+msgid "We use cookies that are necessary for this website to work. With your consent, we also use optional cookies and third-party services. You can change your decision at any time."
+msgstr "A weboldal működéséhez szükséges sütiket használunk. A hozzájárulásoddal további sütiket és külső szolgáltatásokat is használunk. A döntésedet bármikor módosíthatod."
+
+#: includes/class-mpc-texts.php:135
+msgctxt "formal"
+msgid "We use cookies that are necessary for this website to work. With your consent, we also use optional cookies and third-party services. You can change your decision at any time."
+msgstr "A weboldal működéséhez szükséges sütiket használunk. Az Ön hozzájárulásával további sütiket és külső szolgáltatásokat is használunk. Döntését bármikor módosíthatja."
+
+#: includes/class-mpc-texts.php:136
+#: includes/class-mpc-texts.php:153
+msgid "Cookie settings"
+msgstr "Sütibeállítások"
+
+#: includes/class-mpc-texts.php:138
+msgctxt "informal"
+msgid "Choose which categories of cookies you allow. Strictly necessary cookies are always active, because the website cannot work without them. You can change your decision at any time with the cookie settings button or link."
+msgstr "Válaszd ki, mely sütikategóriákat engedélyezed. A feltétlenül szükséges sütik mindig aktívak, mert nélkülük a weboldal nem működik. A döntésedet bármikor módosíthatod a Sütibeállítások gombbal vagy hivatkozással."
+
+#: includes/class-mpc-texts.php:139
+msgctxt "formal"
+msgid "Choose which categories of cookies you allow. Strictly necessary cookies are always active, because the website cannot work without them. You can change your decision at any time with the cookie settings button or link."
+msgstr "Válassza ki, mely sütikategóriákat engedélyezi. A feltétlenül szükséges sütik mindig aktívak, mert nélkülük a weboldal nem működik. Döntését bármikor módosíthatja a Sütibeállítások gombbal vagy hivatkozással."
+
+#: includes/class-mpc-texts.php:140
+msgid "Accept all"
+msgstr "Mindet elfogadom"
+
+#: includes/class-mpc-texts.php:141
+msgid "Reject all"
+msgstr "Mindet elutasítom"
+
+#: includes/class-mpc-texts.php:143
+msgid "Save my choices"
+msgstr "Kiválasztottak mentése"
+
+#: includes/class-mpc-texts.php:144
+msgid "Close"
+msgstr "Bezárás"
+
+#: includes/class-mpc-texts.php:145
+msgid "Always active"
+msgstr "Mindig aktív"
+
+#: includes/class-mpc-texts.php:146
+msgid "Cookies used"
+msgstr "Használt sütik"
+
+#: includes/class-mpc-texts.php:147
+msgid "Name"
+msgstr "Név"
+
+#: includes/class-mpc-texts.php:148
+msgid "Provider"
+msgstr "Szolgáltató"
+
+#: includes/class-mpc-texts.php:149
+msgid "Purpose"
+msgstr "Cél"
+
+#: includes/class-mpc-texts.php:150
+msgid "Expiry"
+msgstr "Lejárat"
+
+#: includes/class-mpc-texts.php:151
+msgid "Cookie policy"
+msgstr "Cookie-szabályzat"
+
+#: includes/class-mpc-texts.php:152
+msgid "Privacy notice"
+msgstr "Adatkezelési tájékoztató"
+
+#: includes/class-mpc-texts.php:154
+msgid "Allow and show"
+msgstr "Engedélyezem és megjelenítem"
+
+#: includes/class-mpc-texts.php:156
+msgctxt "informal"
+msgid "Stores your cookie choices"
+msgstr "A sütikkel kapcsolatos döntésedet tárolja"
+
+#: includes/class-mpc-texts.php:157
+msgctxt "formal"
+msgid "Stores your cookie choices"
+msgstr "A sütikkel kapcsolatos döntését tárolja"
+
+#: includes/class-mpc-texts.php:171
+msgid "Strictly necessary"
+msgstr "Feltétlenül szükséges"
+
+#: includes/class-mpc-texts.php:173
+msgctxt "informal"
+msgid "Essential for the website to work, for example to remember your cookie choices or keep you signed in. They cannot be switched off."
+msgstr "A weboldal működéséhez elengedhetetlenek: például ezek jegyzik meg a sütikkel kapcsolatos döntésedet, vagy tartják fenn a bejelentkezést. Nem kapcsolhatók ki."
+
+#: includes/class-mpc-texts.php:174
+msgctxt "formal"
+msgid "Essential for the website to work, for example to remember your cookie choices or keep you signed in. They cannot be switched off."
+msgstr "A weboldal működéséhez elengedhetetlenek: például ezek jegyzik meg a sütikkel kapcsolatos döntését, vagy tartják fenn a bejelentkezést. Nem kapcsolhatók ki."
+
+#: includes/class-mpc-texts.php:177
+msgid "Functional"
+msgstr "Funkcionális"
+
+#: includes/class-mpc-texts.php:179
+msgctxt "informal"
+msgid "Enable extra features and embedded content from other providers, such as maps and videos, and remember your preferences."
+msgstr "Kiegészítő funkciókat és más szolgáltatóktól származó beágyazott tartalmakat (például térképet, videót) tesznek lehetővé, és megjegyzik a beállításaidat."
+
+#: includes/class-mpc-texts.php:180
+msgctxt "formal"
+msgid "Enable extra features and embedded content from other providers, such as maps and videos, and remember your preferences."
+msgstr "Kiegészítő funkciókat és más szolgáltatóktól származó beágyazott tartalmakat (például térképet, videót) tesznek lehetővé, és megjegyzik a beállításait."
+
+#: includes/class-mpc-texts.php:184
+msgid "Help us understand how visitors use the website, so we can improve it. The information is collected in aggregate."
+msgstr "Segítenek megérteni, hogyan használják a látogatók a weboldalt, hogy fejleszthessük. Az adatokat összesítve gyűjtjük."
+
+#: includes/class-mpc-texts.php:189
+msgctxt "informal"
+msgid "Used to measure the effectiveness of our advertising and to show you relevant ads on other websites."
+msgstr "A hirdetéseink hatékonyságát mérik, és lehetővé teszik, hogy más weboldalakon is számodra releváns hirdetéseket jelenítsünk meg."
+
+#: includes/class-mpc-texts.php:190
+msgctxt "formal"
+msgid "Used to measure the effectiveness of our advertising and to show you relevant ads on other websites."
+msgstr "A hirdetéseink hatékonyságát mérik, és lehetővé teszik, hogy más weboldalakon is az Ön számára releváns hirdetéseket jelenítsünk meg."
+
+#. translators: 1: provider, for example YouTube. 2: cookie category name.
+#: includes/class-mpc-texts.php:205
+#, php-format
+msgctxt "informal"
+msgid "This content is provided by %1$s and may use cookies. To view it, allow the “%2$s” cookies."
+msgstr "Ezt a tartalmat a(z) %1$s szolgáltatja, és sütiket használhat. A megtekintéséhez engedélyezd a(z) „%2$s” sütiket."
+
+#. translators: 1: provider, for example YouTube. 2: cookie category name.
+#: includes/class-mpc-texts.php:207
+#, php-format
+msgctxt "formal"
+msgid "This content is provided by %1$s and may use cookies. To view it, allow the “%2$s” cookies."
+msgstr "Ezt a tartalmat a(z) %1$s szolgáltatja, és sütiket használhat. A megtekintéséhez engedélyezze a(z) „%2$s” sütiket."
+
+#. translators: %d: number of days.
+#: includes/class-mpc-texts.php:220
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d nap"
+msgstr[1] "%d nap"

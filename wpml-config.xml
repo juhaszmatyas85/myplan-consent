@@ -1,0 +1,13 @@
+<wpml-config>
+	<admin-texts>
+		<key name="myplan_consent_settings">
+			<key name="text_banner_title" />
+			<key name="text_banner_body" />
+			<key name="text_prefs_intro" />
+			<key name="cookies_necessary" />
+			<key name="cookies_functional" />
+			<key name="cookies_analytics" />
+			<key name="cookies_marketing" />
+		</key>
+	</admin-texts>
+</wpml-config>
