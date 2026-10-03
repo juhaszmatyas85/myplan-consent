@@ -201,6 +201,12 @@ JS;
 		) as $setting => $label ) {
 			$page = (int) MPC_Settings::get( $setting );
 
+			// One page holding both (a privacy notice with a cookie section)
+			// gets one link, under the privacy notice's name.
+			if ( 'policy_page' === $setting && $page === (int) MPC_Settings::get( 'privacy_page' ) ) {
+				continue;
+			}
+
 			if ( $page && 'publish' === get_post_status( $page ) ) {
 				$links[] = sprintf( '<a href="%s"%s>%s</a>', esc_url( get_permalink( $page ) ), MPC_Texts::no_translate_attr(), esc_html( $t[ $label ] ) );
 			}

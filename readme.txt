@@ -1,7 +1,7 @@
 === MyPlan Cookie Consent ===
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPL-2.0-or-later
 
 Cookie banner for EU sites: Google Consent Mode v2, script and embed blocking, consent log, WP Consent API, Global Privacy Control. Translatable; works with WPML, Polylang and TranslatePress.
@@ -33,3 +33,12 @@ mpConsent.allowed( 'analytics' ), mpConsent.open(), mpConsent.onChange( fn ), mp
 == Not covered ==
 
 IAB TCF and Google CMP certification. Advertisers may use their own banner with Consent Mode v2; publishers serving Google ads (AdSense, Ad Manager, AdMob) in the EEA/UK/CH need a Google-certified CMP.
+
+== Changelog ==
+
+= 1.1.0 =
+* Elementor Video widget (YouTube, Vimeo) is held back until consent; embedded privacy-enhanced (youtube-nocookie.com, Vimeo dnt=1). With Elementor's element cache on, clear Elementor's cache after activating.
+* When the cookie policy and the privacy notice are the same page, the banner shows one link.
+
+= 1.0.0 =
+* First release.

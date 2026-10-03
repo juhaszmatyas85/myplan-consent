@@ -421,6 +421,14 @@
 	text-align: center;
 }
 
+/* Elementor Video widget: the wrapper already has the aspect ratio. */
+.mpc-elementor-video > .mpc-embed,
+.mpc-elementor-video .mpc-embed__placeholder {
+	height: 100%;
+	aspect-ratio: auto;
+	min-height: 0;
+}
+
 .mpc-embed__placeholder p {
 	max-width: 520px;
 	margin: 0 0 12px;

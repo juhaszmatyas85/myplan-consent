@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       MyPlan Cookie Consent
  * Description:       GDPR cookie banner with Google Consent Mode v2 (advanced and basic), script and embed blocking, consent log and WP Consent API support. Translatable with gettext, WPML, Polylang and TranslatePress.
- * Version:           1.0.0
+ * Version:           1.1.0
  * Requires at least: 6.2
  * Requires PHP:      7.4
  * Author:            MyPlan
@@ -15,7 +15,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'MPC_VERSION', '1.0.0' );
+define( 'MPC_VERSION', '1.1.0' );
 define( 'MPC_FILE', __FILE__ );
 define( 'MPC_DIR', plugin_dir_path( __FILE__ ) );
 define( 'MPC_URL', plugin_dir_url( __FILE__ ) );

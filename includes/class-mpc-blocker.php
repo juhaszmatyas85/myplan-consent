@@ -33,6 +33,69 @@ class MPC_Blocker {
 		add_filter( 'embed_oembed_html', array( __CLASS__, 'block_iframes' ), 99 );
 		add_filter( 'widget_text', array( __CLASS__, 'block_iframes' ), 99 );
 		add_filter( 'widget_block_content', array( __CLASS__, 'block_iframes' ), 99 );
+		add_filter( 'elementor/widget/render_content', array( __CLASS__, 'elementor_video' ), 99, 2 );
+	}
+
+	/**
+	 * Holds back Elementor's Video widget (YouTube, Vimeo).
+	 *
+	 * The widget has no iframe in its markup: Elementor's front-end handler
+	 * reads the address from the wrapper's data-settings and loads the YouTube
+	 * iframe API (and with it YouTube's cookies) on page load, so the content
+	 * filters never see anything to block. Here the widget's own markup is
+	 * replaced by a plain embed iframe that goes through the embed rules like
+	 * any other, and the video type is switched to "hosted" before Elementor
+	 * prints data-settings, which makes the handler step aside.
+	 *
+	 * YouTube is embedded from youtube-nocookie.com and Vimeo with dnt=1, the
+	 * privacy-enhanced modes of both.
+	 *
+	 * @param string $content Widget markup.
+	 * @param object $widget  Elementor widget.
+	 * @return string
+	 */
+	public static function elementor_video( $content, $widget ) {
+		if ( ! is_object( $widget ) || ! method_exists( $widget, 'get_name' ) || 'video' !== $widget->get_name() ) {
+			return $content;
+		}
+
+		if ( class_exists( '\\Elementor\\Plugin' ) && \Elementor\Plugin::$instance->editor && \Elementor\Plugin::$instance->editor->is_edit_mode() ) {
+			return $content;
+		}
+
+		$s    = $widget->get_settings_for_display();
+		$type = isset( $s['video_type'] ) ? $s['video_type'] : 'youtube';
+		$src  = '';
+
+		if ( 'youtube' === $type && ! empty( $s['youtube_url'] )
+			&& preg_match( '~(?:youtu\.be/|youtube(?:-nocookie)?\.com/(?:(?:watch)?\?(?:.*&)?vi?=|(?:embed|v|vi|shorts|live)/))([A-Za-z0-9_-]{6,})~', $s['youtube_url'], $m ) ) {
+			$src = 'https://www.youtube-nocookie.com/embed/' . $m[1] . '?rel=0';
+		} elseif ( 'vimeo' === $type && ! empty( $s['vimeo_url'] ) && preg_match( '~vimeo\.com/(?:video/)?(\d+)~', $s['vimeo_url'], $m ) ) {
+			$src = 'https://player.vimeo.com/video/' . $m[1] . '?dnt=1';
+		}
+
+		if ( '' === $src || ! self::rule_for( $src ) ) {
+			return $content;
+		}
+
+		// Elementor caches the parsed settings it builds data-settings from,
+		// so the cache is dropped after the change (Elementor 3.30+; on older
+		// versions the handler still runs, but the embed itself stays held back).
+		// ⚠️ With Elementor's element cache on, rendered widgets are stored in
+		// the _elementor_element_cache post meta: clear Elementor's cache
+		// (Elementor → Tools → Clear Files & Data) after activating this plugin.
+		$widget->set_settings( 'video_type', 'hosted' );
+		if ( method_exists( $widget, 'reset_render_state' ) ) {
+			$widget->reset_render_state();
+		}
+
+		$iframe = sprintf(
+			'<iframe src="%s" width="640" height="360" title="%s" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width:100%%;height:100%%;border:0"></iframe>',
+			esc_url( $src ),
+			esc_attr__( 'Video', 'myplan-consent' )
+		);
+
+		return '<div class="elementor-wrapper elementor-open-inline mpc-elementor-video">' . self::block_iframes( $iframe ) . '</div>';
 	}
 
 	/**
